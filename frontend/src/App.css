@@ -1,38 +1,120 @@
 .App {
-  text-align: center;
+    text-align: center;
 }
 
+
 .App-logo {
-  height: 40vmin;
-  pointer-events: none;
+    height: 40vmin;
+    pointer-events: none;
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+    .App-logo {
+        animation: App-logo-spin infinite 20s linear;
+    }
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+    background-color: #282c34;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
 }
 
 .App-link {
-  color: #61dafb;
+    color: #61dafb;
 }
 
 @keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+body {
+    margin: 20px;
+    background-color: #1947a8;
+}
+
+.app-container {
+    grid-template-columns: 1fr;
+
+}
+.app-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+
+    button {
+        padding: 5px;
+        font-size: 20px;
+        border-radius: 10px;
+        border: none;
+    }
+}
+
+textarea, input {
+    border-radius: 5px;
+    border: 1px solid #000000;
+    padding: 10px;
+    font-size: 16px;
+}
+
+
+
+.notes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-auto-rows: minmax(250px, auto);
+    gap: 20px;
+}
+
+.notes-item {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    border: 1px solid lightcoral;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: white;
+    box-shadow: #61dafb 1px 1px 1px;
+    cursor: pointer;
+}
+
+
+.notes-header {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.notes-header button {
+    font-size: 16px;
+    background: transparent;
+    border: none;
+    color: #b30573;
+    cursor: pointer;
+    max-width: fit-content;
+}
+
+h2 {
+    margin: 0;
+
+}
+
+@media (min-width: 600px) {
+    .app-container {
+        display: grid;
+        grid-template-columns: 200px 1fr;
+        gap: 20px;
+    }
+
 }
