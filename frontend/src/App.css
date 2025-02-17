@@ -59,8 +59,50 @@ body {
         font-size: 20px;
         border-radius: 10px;
         border: none;
+
+        background-color: #ffffff;
+        &:hover {
+            background-color: #c7c7c7;
+        }
     }
 }
+
+.form-edit {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 10px;
+    width: 100%;
+
+    button {
+        flex: 1;
+        padding: 5px;
+        font-size: 20px;
+        border-radius: 10px;
+        border: none;
+        cursor: pointer;
+        color: white;
+    }
+
+    .edit {
+        background-color: green;
+        &:hover {
+            background-color: darkgreen;
+        }
+    }
+
+    .cancel {
+        background-color: red;
+        &:hover {
+            background-color: darkred;
+        }
+    }
+
+}
+
+
+
+
 
 textarea, input {
     border-radius: 5px;
